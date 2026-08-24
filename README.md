@@ -1,8 +1,6 @@
 # HACK-PAD V2
 
-Macropad **inalámbrico** de 4 teclas mecánicas con pantalla OLED a color,
-LEDs RGB y minijuego secreto, basado en un Seeed XIAO ESP32-C3 (BLE).
-Diseño de PCB propio (KiCad) + firmware + app de PC para configurarlo.
+Hola! Este es un rediseño de mi anterior Hack Pad. Esta nueva version incluye mas y mejores funciones, incluso puedes encontrar un pequeño easter-egg en forma de un minijuego :D
 
 ## Qué hace
 
