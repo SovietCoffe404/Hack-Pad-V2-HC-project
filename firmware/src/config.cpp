@@ -1,14 +1,11 @@
 #include "config.h"
-#include <FlashStorage.h>
+#include <Preferences.h>
 
 HackPadConfig cfg;
-
-// Reserva un slot en flash interna del tamaño de HackPadConfig.
-FlashStorage(flashConfigStore, HackPadConfig);
+static Preferences prefs;
 
 void config_load_defaults() {
   memset(&cfg, 0, sizeof(cfg));
-  cfg.magic = CONFIG_MAGIC;
   strncpy(cfg.homeText, "HACK-PAD", sizeof(cfg.homeText) - 1);
 
   strncpy(cfg.macro[0], "@COPY",  sizeof(cfg.macro[0]) - 1);
@@ -21,10 +18,10 @@ void config_load_defaults() {
 }
 
 void config_load() {
-  HackPadConfig fromFlash;
-  flashConfigStore.read(fromFlash);
-  if (fromFlash.magic == CONFIG_MAGIC) {
-    cfg = fromFlash;
+  prefs.begin("hackpad", /*readOnly=*/false);
+  size_t len = prefs.getBytesLength("cfg");
+  if (len == sizeof(HackPadConfig)) {
+    prefs.getBytes("cfg", &cfg, sizeof(HackPadConfig));
   } else {
     config_load_defaults();
     config_save();
@@ -32,6 +29,5 @@ void config_load() {
 }
 
 void config_save() {
-  cfg.magic = CONFIG_MAGIC;
-  flashConfigStore.write(cfg);
+  prefs.putBytes("cfg", &cfg, sizeof(HackPadConfig));
 }

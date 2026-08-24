@@ -2,6 +2,7 @@
 #include "config.h"
 #include "leds.h"
 #include "display.h"
+#include "keys.h"
 
 // ============================================================================
 // Protocolo por Serial (USB CDC), texto plano terminado en '\n':
@@ -13,8 +14,8 @@
 //                                    paralelo a propósito, así que siempre
 //                                    van todos iguales; hex sin '#')
 //   SET_BRIGHTNESS <0-255>
-//   SAVE                          -> persiste todo a flash interna
-//   GET_CONFIG                    -> vuelca la config actual
+//   SAVE                          -> persiste todo a NVS (flash)
+//   GET_CONFIG                    -> vuelca la config actual (incluye estado BLE)
 //   IMG_START                     -> el firmware espera EXACTAMENTE 128*128*2
 //                                    bytes crudos RGB565 (big-endian) a
 //                                    continuación, sin saltos de línea.
@@ -54,6 +55,7 @@ static void sendConfigDump() {
     Serial.print("COLOR "); Serial.println(buf);
   }
   Serial.print("BRIGHTNESS "); Serial.println(cfg.brightness);
+  Serial.print("BLE "); Serial.println(bleKeyboard.isConnected() ? "CONNECTED" : "DISCONNECTED");
   Serial.println("OK");
 }
 

@@ -3,8 +3,19 @@
 #include <SPI.h>
 
 static Adafruit_SSD1351 tft(SCREEN_W, SCREEN_H, &SPI, PIN_OLED_CS, PIN_OLED_DC, PIN_OLED_RST);
+static bool bleConnected = false;
 
 Adafruit_SSD1351 &display_raw() { return tft; }
+
+void display_set_ble_status(bool connected) {
+  bleConnected = connected;
+}
+
+// Punto arriba a la derecha: verde = conectado por BLE, gris = buscando/desconectado
+static void drawBleDot() {
+  uint16_t color = bleConnected ? 0x07E0 : 0x39C7;
+  tft.fillCircle(SCREEN_W - 8, 8, 4, color);
+}
 
 void display_init() {
   tft.begin();
@@ -52,6 +63,7 @@ static void printWrapped(const char *msg, uint8_t textSize) {
 void display_show_home() {
   tft.fillScreen(0x0000);
   printWrapped(cfg.homeText, 2);
+  drawBleDot();
 }
 
 void display_show_text(const char *msg, uint16_t color) {

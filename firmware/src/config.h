@@ -2,9 +2,9 @@
 #include <Arduino.h>
 
 // ======================================================================
-// PINOUT — obtenido rastreando el netlist real de HACK-PAD_V2.kicad_pcb
-// (no es un pinout genérico, es el de tu PCB específico).
-// Si algo no prende/lee bien, revisa primero esto contra tu placa.
+// PINOUT — mismo que la versión con cable (SAMD21): el XIAO ESP32-C3
+// comparte footprint Y mismos pines de SPI de hardware con el resto de
+// la familia XIAO, así que el cableado de la placa no cambió.
 // ======================================================================
 #define PIN_KEY1      0   // SW1
 #define PIN_KEY2      1   // SW2
@@ -23,27 +23,23 @@
 #define SCREEN_H 128
 
 // ======================================================================
-// Configuración persistente (se guarda en flash interna con FlashStorage)
-// La mantenemos chica a propósito: la flash interna del SAMD21 no tiene
-// mucho espacio libre y no queremos arriesgar corromper el firmware.
-// La imagen custom NO se guarda aquí (ver README) — se re-envía desde
-// la app de PC cada sesión.
+// Configuración persistente — en el ESP32-C3 se guarda en NVS (flash)
+// vía la librería Preferences, en vez de FlashStorage (esa era específica
+// del SAMD21). La imagen custom sigue sin guardarse (ver README): el
+// ESP32-C3 tiene flash de sobra para eso, pero se dejó para una mejora
+// futura en vez de meterlo ahora.
 // ======================================================================
-#define CONFIG_MAGIC 0xA5C7
-
 struct HackPadConfig {
-  uint16_t magic;
   char homeText[64];
   char macro[4][40];      // texto o "@ATAJO" (ver keys.cpp)
   uint8_t ledColor[3];    // un solo color: los 6 LEDs comparten DIN en
                            // paralelo (a propósito), así que siempre
-                           // muestran el mismo color, no son direccionables
-                           // individualmente.
+                           // muestran el mismo color.
   uint8_t brightness;     // 0-255
 };
 
 extern HackPadConfig cfg;
 
 void config_load_defaults();
-void config_load();   // lee de flash (o carga defaults si no hay nada válido)
-void config_save();   // escribe a flash
+void config_load();   // lee de NVS (o carga defaults si no hay nada guardado)
+void config_save();   // escribe a NVS

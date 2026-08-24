@@ -1,23 +1,24 @@
 # HACK-PAD V2
 
-Macropad de 4 teclas mecánicas con pantalla OLED a color, LEDs RGB y
-minijuego secreto, basado en un Seeeduino XIAO (SAMD21). Diseño de PCB
-propio (KiCad) + firmware + app de PC para configurarlo.
+Macropad **inalámbrico** de 4 teclas mecánicas con pantalla OLED a color,
+LEDs RGB y minijuego secreto, basado en un Seeed XIAO ESP32-C3 (BLE).
+Diseño de PCB propio (KiCad) + firmware + app de PC para configurarlo.
 
 ## Qué hace
 
 - 🖥️ **Pantalla personalizable** — texto o imagen propia, controlado desde la app de PC.
-- ⌨️ **4 teclas con macros editables** — atajos (copiar/pegar/deshacer/etc.) o texto libre, se manda por USB como teclado real.
+- ⌨️ **4 teclas con macros editables** — atajos (copiar/pegar/deshacer/etc.) o texto libre, se mandan por **Bluetooth LE** como si fuera un teclado real.
 - 🌈 **LEDs RGB con color configurable** — los 6 SK6812 van todos del mismo color (comparten datos en paralelo, por diseño).
-- 🎮 **Minijuego secreto** — Snake escondido en el propio pad, se activa manteniendo las 4 teclas apretadas.
+- 🎮 **Minijuego secreto** — Snake escondido en el propio pad, se activa manteniendo las 4 teclas apretadas (anda sin BLE conectado también).
 - 🕹️ **Minijuegos extra en la PC** — Snake y Simon Says, corren en la app de escritorio.
+- 🔌 **Cable USB** — solo para configurar desde la app de PC (texto, macros, colores, imagen); las macros normales van por BLE.
 - 🔋 A batería (Li-ion 14500 + carga TP4056).
 
 ## Estructura del repo
 
 ```
 HACK-PAD/
-├── firmware/     Firmware en C++ (PlatformIO) que se sube al XIAO
+├── firmware/     Firmware en C++ (PlatformIO) que se sube al XIAO ESP32-C3
 ├── pc_app/       App de escritorio en Python para configurar el pad
 └── hardware/     Proyecto de KiCad (esquemático, PCB, modelos 3D)
 ```
@@ -28,14 +29,19 @@ general.
 ## Empezando
 
 1. **Armar/soldar la placa** — ver `hardware/` para el esquemático, layout
-   y el modelo 3D para imprimir el case.
+   y el modelo 3D para imprimir el case. El módulo a soldar es un
+   **Seeed XIAO ESP32-C3** (ver nota de compatibilidad en `hardware/README.md`).
 2. **Subir el firmware** — ver `firmware/README.md` (PlatformIO + VS Code).
-3. **Instalar la app de PC** — ver `pc_app/README.md` (`pip install -r
-   requirements.txt` y listo).
+3. **Emparejar por Bluetooth** — buscá "HACK-PAD" en la configuración de
+   Bluetooth de tu PC/teléfono (detalle en `firmware/README.md`).
+4. **Instalar la app de PC** — ver `pc_app/README.md` (`pip install -r
+   requirements.txt` y listo) — se conecta por el cable USB.
 
-## Pinout (Seeeduino XIAO)
+## Pinout (Seeed XIAO ESP32-C3)
 
-Trazado directo del netlist del PCB, no es un pinout genérico:
+Trazado directo del netlist del PCB original, no es un pinout genérico —
+y confirmado que coincide con el del XIAO ESP32-C3 (misma familia,
+mismos pines de SPI de hardware):
 
 | Pin XIAO | Conectado a |
 |---|---|
@@ -47,10 +53,18 @@ Trazado directo del netlist del PCB, no es un pinout genérico:
 | D9 (MISO) | CS de la OLED |
 | D10 (MOSI) | MOSI/DIN de la OLED |
 
-## Protocolo de comunicación (firmware ↔ app de PC)
+## Cable vs Bluetooth — quién hace qué
 
-Texto plano por USB CDC, 115200 baud — el detalle completo de comandos
-está en `firmware/README.md`. Resumen:
+| | Cable USB | Bluetooth LE |
+|---|---|---|
+| Configurar texto/macros/colores/imagen (`pc_app/`) | ✅ | ❌ (no implementado) |
+| Mandar las macros de las 4 teclas | ❌ (el ESP32-C3 no tiene USB HID) | ✅ |
+| Minijuego secreto (Snake en el pad) | funciona igual, no depende de ninguno de los dos | |
+
+## Protocolo de comunicación (firmware ↔ app de PC, por cable)
+
+Texto plano por USB, 115200 baud — el detalle completo de comandos está
+en `firmware/README.md`. Resumen:
 
 ```
 PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONFIG · IMG_START

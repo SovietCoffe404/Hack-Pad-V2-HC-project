@@ -1,7 +1,7 @@
 # hardware/
 
 Proyecto de KiCad 8 del HACK-PAD V2 (macropad de 4 teclas + pantalla OLED +
-LEDs RGB, basado en un Seeeduino XIAO).
+LEDs RGB).
 
 | Archivo | Qué es |
 |---|---|
@@ -11,17 +11,34 @@ LEDs RGB, basado en un Seeeduino XIAO).
 | `HACK-PAD_V2.kicad_prl` | Preferencias locales del proyecto (no crítico) |
 | `fp-lib-table` | Tabla de librerías de footprints usadas |
 | `3D_HACK-PAD_Assembled.step` | Modelo 3D con todos los componentes montados — para visualizar/renderizar el pad completo |
-| `3D_HACK-PAD_Printing.step` | Modelo 3D simplificado (sin componentes electrónicos) — para imprimir el case/enclosure en una impresora 3D o mandar a cortar |
+| `3D_HACK-PAD_Printing.step` | Modelo 3D simplificado (sin componentes electrónicos) — para imprimir el case/enclosure |
 
-## Pinout (Seeeduino XIAO)
+## Módulo XIAO: SAMD21 (placa) → ESP32-C3 (firmware actual)
 
-Esto es lo que usa el firmware — si modificás el layout y cambiás algún pin,
-hay que actualizar `firmware/src/config.h` a mano.
+El esquemático/PCB fueron diseñados originalmente con el footprint del
+**Seeed XIAO SAMD21**. El firmware actual (`firmware/`) apunta al **Seeed
+XIAO ESP32-C3** para tener Bluetooth.
+
+**No hace falta rediseñar la placa**: toda la familia XIAO (SAMD21,
+ESP32-C3, ESP32-S3, nRF52840, RP2040...) comparte el mismo footprint de
+14 pads castellados de 21×17.5mm, y confirmado que los pines de SPI de
+hardware caen en los mismos lugares (D8=SCK, D9=MISO, D10=MOSI) en el
+SAMD21 y en el ESP32-C3 — el módulo se puede reemplazar en la placa física
+sin tocar el cableado.
+
+Lo único que queda "desprolijo" es cosmético: el símbolo en el
+esquemático todavía dice `MOUDLE-SEEEDUINO-XIAO` (el valor original). Si
+querés que el BOM/esquemático reflejen el chip real, en KiCad:
+`Edit > Change Symbols...` y actualizá el `Value` a algo como
+`XIAO-ESP32C3`. No es necesario para que la placa funcione, es solo
+prolijidad del proyecto.
+
+## Pinout (aplica a cualquier módulo XIAO que uses)
 
 | Pin XIAO | Conectado a |
 |---|---|
 | D0–D3 | Botones SW1–SW4 (a GND, con pull-up interno) |
-| D4 (SDA) | Datos de los 6 LEDs SK6812 — **los 6 comparten el mismo DIN en paralelo a propósito**, por eso siempre muestran el mismo color; no son direccionables individualmente |
+| D4 (SDA) | Datos de los 6 LEDs SK6812 — **los 6 comparten el mismo DIN en paralelo a propósito**, por eso siempre muestran el mismo color |
 | D5 (SCL) | RST de la OLED |
 | D6 (TX) | DC de la OLED |
 | D8 (SCK) | SCK de la OLED (SPI de hardware) |

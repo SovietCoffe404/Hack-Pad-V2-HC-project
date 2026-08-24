@@ -1,10 +1,13 @@
 #include "keys.h"
 #include "config.h"
-#include <Keyboard.h>
+
+// El pad se presenta como teclado Bluetooth LE (no hay USB HID nativo en
+// el ESP32-C3, solo un puerto serie por USB — ver serial_protocol.cpp).
+BleKeyboard bleKeyboard("HACK-PAD", "Santi", 100);
 
 static const uint8_t PINS[4] = {PIN_KEY1, PIN_KEY2, PIN_KEY3, PIN_KEY4};
 
-static bool lastState[4]     = {false, false, false, false};
+static bool lastState[4]      = {false, false, false, false};
 static uint32_t lastChange[4] = {0, 0, 0, 0};
 static const uint32_t DEBOUNCE_MS = 25;
 
@@ -15,22 +18,28 @@ static bool comboFired = false;
 
 void keys_init() {
   for (int i = 0; i < 4; i++) pinMode(PINS[i], INPUT_PULLUP);
-  Keyboard.begin();
+  bleKeyboard.begin();
 }
 
-// Presiona una combinación de modificadores + tecla y suelta
+// Presiona una combinación de modificadores + tecla y suelta.
+// Mismos nombres de constante que Arduino Keyboard.h (BleKeyboard los
+// define compatibles a propósito), así que esta lógica es casi idéntica
+// a la versión con cable.
 static void sendCombo(uint8_t modifier, uint8_t key) {
-  if (modifier) Keyboard.press(modifier);
-  Keyboard.press(key);
+  if (!bleKeyboard.isConnected()) return;
+  if (modifier) bleKeyboard.press(modifier);
+  bleKeyboard.press(key);
   delay(15);
-  Keyboard.releaseAll();
+  bleKeyboard.releaseAll();
 }
 
 // Traduce atajos con prefijo "@" a combinaciones reales de teclado.
 // Si no matchea ninguno, se escribe el texto literal tal cual.
 static void executeMacroString(const char *m) {
+  if (!bleKeyboard.isConnected()) return; // sin conexión BLE no hay a quién mandarle nada
+
   if (m[0] != '@') {
-    Keyboard.print(m);
+    bleKeyboard.print(m);
     return;
   }
   if (!strcmp(m, "@COPY"))        sendCombo(KEY_LEFT_CTRL, 'c');
@@ -46,7 +55,7 @@ static void executeMacroString(const char *m) {
   else if (!strcmp(m, "@TAB"))    sendCombo(0, KEY_TAB);
   else {
     // atajo desconocido -> lo escribe tal cual para que el usuario lo note
-    Keyboard.print(m);
+    bleKeyboard.print(m);
   }
 }
 
