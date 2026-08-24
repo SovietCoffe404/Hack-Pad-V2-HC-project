@@ -1,0 +1,10 @@
+# Los STEP son texto plano por dentro pero son modelos 3D generados por
+# software de CAD — tratarlos como binarios evita que git intente mostrar
+# diffs línea por línea de archivos de varios MB.
+*.step -diff binary
+*.kicad_pcb -diff
+*.kicad_sch -diff
+
+# Si el repo empieza a pesar mucho por el STEP de 29MB, se puede migrar a
+# Git LFS descomentando estas líneas (requiere "git lfs install" antes):
+# *.step filter=lfs diff=lfs merge=lfs -text

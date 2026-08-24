@@ -1,0 +1,34 @@
+# ---- PlatformIO / firmware ----
+firmware/.pio/
+firmware/.vscode/
+*.o
+*.elf
+*.bin
+*.uf2
+
+# ---- Python / pc_app ----
+pc_app/__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+*.egg-info/
+
+# ---- KiCad ----
+# Backups automáticos que genera KiCad al guardar (no aportan nada al repo,
+# y pesan mucho con el tiempo)
+hardware/*-backups/
+*.kicad_pcb-bak
+*.kicad_sch-bak
+fp-info-cache
+*.lck
+
+# ---- Sistema operativo ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Editor ----
+.vscode/
+.idea/
