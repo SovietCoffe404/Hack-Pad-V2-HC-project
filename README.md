@@ -56,8 +56,6 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 
 <img width="269" height="350" alt="Screenshot 2026-08-25 124445" src="https://github.com/user-attachments/assets/02c9b169-3304-421c-acd9-4ff05f4cdaec" />
 
-## BOM
-
 # HACK-PAD V2 — Bill of Materials (BOM)
 
 ## Electrónica principal
