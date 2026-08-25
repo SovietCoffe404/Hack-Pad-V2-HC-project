@@ -48,6 +48,16 @@ en `firmware/README.md`. Resumen:
 ```
 PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONFIG · IMG_START
 ```
+## Screen Shots del proyecto 
+
+<img width="392" height="266" alt="Screenshot 2026-08-23 134833" src="https://github.com/user-attachments/assets/fdafd54b-7331-4a69-8acb-91fbe255be91" />
+
+<img width="623" height="305" alt="Screenshot 2026-08-07 132914" src="https://github.com/user-attachments/assets/3f805d54-b381-4061-98b6-7c45c9c34c3c" />
+
+<img width="269" height="350" alt="Screenshot 2026-08-25 124445" src="https://github.com/user-attachments/assets/02c9b169-3304-421c-acd9-4ff05f4cdaec" />
+
+## BOM
+
 
 ## Licencia
 
