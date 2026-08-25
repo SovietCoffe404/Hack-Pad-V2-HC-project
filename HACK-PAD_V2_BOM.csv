@@ -1,0 +1,31 @@
+HACK-PAD V2 — Bill of Materials (BOM),,,,,,,
+,,,,,,,
+Ref.,Componente,Descripción / Especificación,Cant.,Precio unit. est. (USD),Subtotal (USD),Proveedor sugerido,Enlace
+Electrónica principal,,,,,,,
+U1,Seeed XIAO ESP32-C3,"MCU BLE, footprint XIAO 14 pads castellados 21x17.5mm. Reemplaza al XIAO SAMD21 original del esquemático (mismo footprint).",1,$5.50,$5.50,AliExpress (Seeedstudio Store),https://www.aliexpress.com/item/1005004723068527.html
+U2,"OLED 1.5"" 128x128 SPI, SSD1351","Waveshare OLED 1.5inch Module B, 7 pines 2.54mm, color RGB, controlador SSD1351.",1,$13.00,$13.00,AliExpress,https://www.aliexpress.com/item/4000136106619.html
+D7-D12,LED SK6812 (5050 PLCC4 SMD),"LED RGB direccionable, footprint SMD 5.0x5.0mm. 6 unidades, todas comparten el mismo DIN (van en paralelo, mismo color).",6,$0.18,$1.08,AliExpress (comprar por 10-20u),https://www.aliexpress.com/item/32623583544.html
+SW1-SW4,"Switch mecánico tipo Cherry MX (1u, THT)","Footprint SW_Cherry_MX_1.00u_PCB — cualquier switch mecánico compatible Cherry MX (lineal/táctil/clicky, a gusto).",4,$0.45,$1.80,AliExpress,https://es.aliexpress.com/item/1005005751466152.html
+Alimentación / batería,,,,,,,
+BAT1,Batería Li-ion 14500 3.7V,"Formato AA (14.5x50mm), recomendable con protección integrada (PCB) y ~800-1000mAh.",1,$4.50,$4.50,AliExpress,https://es.aliexpress.com/w/wholesale-14500-li-ion-rechargeable-battery-3.7-v.html
+U4,Módulo cargador TP4056 con protección,"Carga Li-ion vía Micro-USB/USB-C, incluye protección de sobrecarga/sobredescarga (DW01A + FET).",1,$0.80,$0.80,AliExpress,https://www.aliexpress.com/item/32467578996.html
+Componentes pasivos (SMD 1206),,,,,,,
+R1,"Resistor 330?, SMD 1206",Ver esquemático — línea de datos de los SK6812 (limitador de corriente).,1,$0.02,$0.02,AliExpress (kit de resistores 1206),https://www.aliexpress.com/w/wholesale-resistor-kit-1206.html
+C1,"Capacitor, SMD 1206",El esquemático indica 500uF — valor inusualmente alto para un 1206 cerámico; revisar en KiCad si corresponde a un electrolítico/tantalio THT antes de comprar.,1,$0.05,$0.05,AliExpress (kit de capacitores 1206),https://www.aliexpress.com/w/wholesale-capacitor-kit-1206.html
+"Estructura y consumibles (no están en el esquemático, pero se necesitan)",,,,,,,
+—,PCB fabricada (HACK-PAD_V2.kicad_pcb),"2 capas, gerbers exportados desde KiCad. Pedir 5-10 unidades (precio no baja mucho por menos).",1,$5.00,$5.00,JLCPCB / PCBWay (no AliExpress),https://jlcpcb.com/
+—,Case impreso en 3D,"Usar 3D_HACK-PAD_Printing.step. PLA o PETG, ~30-50g de filamento.",1,$1.50,$1.50,Impresión propia / servicio local,
+—,Cable USB-C,Para programar y usar la app de PC (protocolo serial).,1,$2.00,$2.00,AliExpress,https://www.aliexpress.com/w/wholesale-usb-c-cable.html
+—,Tornillos M2 (kit),"Para cerrar el case impreso, según diseño final del enclosure.",1,$1.50,$1.50,AliExpress,https://www.aliexpress.com/w/wholesale-m2-screw-kit.html
+—,Keycaps genéricas (opcional),"4 keycaps compatibles Cherry MX, perfil bajo o OEM según el case.",4,$0.30,$1.20,AliExpress,https://www.aliexpress.com/w/wholesale-keycaps-cherry-mx.html
+,,,,,,,
+,,,,TOTAL (sin envío/PCB extra):,$37.95,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
