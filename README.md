@@ -1,8 +1,6 @@
 # HACK-PAD V2
 
-A **wireless** 4-key mechanical macropad with a color OLED screen, RGB
-LEDs, and a secret minigame, built around a Seeed XIAO ESP32-C3 (BLE).
-Custom PCB design (KiCad) + firmware + a PC app to configure it.
+Hiii, well this is my second version of the Hack Pad since the other one was kinda lame though, so I added new functions to it so it's more fun and useful. You can check out the functions down here :D
 
 ## What it does
 
@@ -52,14 +50,6 @@ hardware SPI pins):
 | D8 (SCK) | OLED SCK |
 | D9 (MISO) | OLED CS |
 | D10 (MOSI) | OLED MOSI/DIN |
-
-## Cable vs Bluetooth — who does what
-
-| | USB cable | Bluetooth LE |
-|---|---|---|
-| Configure text/macros/colors/image (`pc_app/`) | ✅ | ❌ (not implemented) |
-| Send the 4 keys' macros | ❌ (the ESP32-C3 has no USB HID) | ✅ |
-| Secret minigame (Snake on the pad) | works either way, doesn't depend on either | |
 
 ## Communication protocol (firmware ↔ PC app, over the cable)
 
