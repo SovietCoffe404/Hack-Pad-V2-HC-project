@@ -11,19 +11,14 @@ void display_set_ble_status(bool connected) {
   bleConnected = connected;
 }
 
-// Punto arriba a la derecha: verde = conectado por BLE, gris = buscando/desconectado
+// Dot in the top right corner: green = connected over BLE, gray = searching/disconnected
 static void drawBleDot() {
   uint16_t color = bleConnected ? 0x07E0 : 0x39C7;
   tft.fillCircle(SCREEN_W - 8, 8, 4, color);
 }
 
-void display_init() {
-  tft.begin();
-  tft.fillScreen(0x0000);
-}
-
-// Envuelve texto simple en líneas para que quepa en 128px de ancho
-// (fuente por defecto: 6px de ancho por caracter a tamaño 1, 12px a tamaño 2)
+// Wraps plain text into lines so it fits within 128px of width
+// (default font: 6px wide per character at size 1, 12px at size 2)
 static void printWrapped(const char *msg, uint8_t textSize) {
   tft.setTextSize(textSize);
   uint8_t charW = 6 * textSize;

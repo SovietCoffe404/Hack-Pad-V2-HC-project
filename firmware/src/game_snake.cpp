@@ -8,7 +8,7 @@
 
 struct Pt { int8_t x, y; };
 
-// direcciones: 0=arriba,1=derecha,2=abajo,3=izquierda
+// directions: 0=up, 1=right, 2=down, 3=left
 static Pt snake[GRID * GRID];
 static int len;
 static int dir;
@@ -117,7 +117,7 @@ void snake_run() {
         drawCell(food.x, food.y, 0xF800);
         leds_rainbow_step();
       } else {
-        drawCell(snake[len].x, snake[len].y, 0x0000); // borra la cola
+        drawCell(snake[len].x, snake[len].y, 0x0000); // erase the tail
       }
       drawCell(snake[0].x, snake[0].y, 0x07E0);
     }

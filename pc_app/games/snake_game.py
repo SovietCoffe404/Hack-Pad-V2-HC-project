@@ -1,5 +1,5 @@
-"""Snake extra, corre en la PC (independiente del snake secreto del pad).
-Se puede ejecutar suelto: python snake_game.py"""
+"""Extra Snake game, runs on the PC (independent from the pad's secret
+snake). Can be run standalone: python snake_game.py"""
 import pygame
 import random
 import sys
@@ -72,7 +72,7 @@ def run():
             pygame.draw.rect(screen, SNAKE_COLOR, (x * CELL, y * CELL, CELL - 2, CELL - 2), border_radius=4)
         pygame.draw.rect(screen, FOOD_COLOR, (food[0] * CELL, food[1] * CELL, CELL - 2, CELL - 2), border_radius=6)
 
-        label = font.render(f"Score: {score}" + ("" if alive else "  -  GAME OVER (R para reiniciar)"), True, TEXT_COLOR)
+        label = font.render(f"Score: {score}" + ("" if alive else "  -  GAME OVER (press R to restart)"), True, TEXT_COLOR)
         screen.blit(label, (8, SIZE + 8))
 
         pygame.display.flip()

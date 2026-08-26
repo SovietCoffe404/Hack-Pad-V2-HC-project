@@ -11,9 +11,9 @@ void config_load_defaults() {
   strncpy(cfg.macro[0], "@COPY",  sizeof(cfg.macro[0]) - 1);
   strncpy(cfg.macro[1], "@PASTE", sizeof(cfg.macro[1]) - 1);
   strncpy(cfg.macro[2], "@UNDO",  sizeof(cfg.macro[2]) - 1);
-  strncpy(cfg.macro[3], "hola!",  sizeof(cfg.macro[3]) - 1);
+  strncpy(cfg.macro[3], "hello!", sizeof(cfg.macro[3]) - 1);
 
-  cfg.ledColor[0] = 255; cfg.ledColor[1] = 0; cfg.ledColor[2] = 80; // rosa
+  cfg.ledColor[0] = 255; cfg.ledColor[1] = 0; cfg.ledColor[2] = 80; // pink
   cfg.brightness = 80;
 }
 

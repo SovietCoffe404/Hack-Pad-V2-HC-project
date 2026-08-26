@@ -1,19 +1,19 @@
 # pc_app/
 
-App de escritorio en Python (Tkinter) para configurar el HACK-PAD por USB.
+Desktop app in Python (Tkinter) to configure the HACK-PAD over USB.
 
-## Estructura
+## Structure
 
-| Archivo | Qué hace |
+| File | What it does |
 |---|---|
-| `hackpad_app.py` | App principal — pestañas Pantalla / Macros / LEDs / Minijuegos extra |
-| `serial_link.py` | Comunicación por USB con el pad (protocolo de `firmware/`) |
-| `image_convert.py` | Convierte cualquier imagen a RGB565 128x128 |
-| `games/snake_game.py` | Snake extra, jugado con el teclado de la PC |
-| `games/memory_game.py` | Simon Says temático, jugado con el mouse |
-| `requirements.txt` | Dependencias |
+| `hackpad_app.py` | Main app — Screen / Macros / LEDs / Extra games tabs |
+| `serial_link.py` | USB communication with the pad (protocol from `firmware/`) |
+| `image_convert.py` | Converts any image to 128x128 RGB565 |
+| `games/snake_game.py` | Extra Snake, played with the PC keyboard |
+| `games/memory_game.py` | Themed Simon Says, played with the mouse |
+| `requirements.txt` | Dependencies |
 
-## Uso
+## Usage
 
 ```bash
 cd pc_app
@@ -21,17 +21,16 @@ pip install -r requirements.txt
 python hackpad_app.py
 ```
 
-1. Conectá el pad por USB, elegí el puerto en la app (es el mismo que
-   usaste para subir el firmware) y dale **Conectar**.
-2. **Pantalla**: texto personalizable, o subí una imagen (se recorta y
-   escala sola a 128x128).
-3. **Macros**: qué hace cada una de las 4 teclas — atajos predefinidos o
-   texto libre.
-4. **LEDs**: un solo color (los 6 LEDs van todos iguales, por diseño de
-   hardware) + brillo.
-5. **Minijuegos extra**: lanza Snake o Memory, corren en la PC (aparte del
-   minijuego secreto que vive dentro del propio pad).
+1. Connect the pad over USB, pick the port in the app (it's the same one
+   you used to flash the firmware) and click **Connect**.
+2. **Screen**: custom text, or upload an image (auto-cropped and scaled
+   to 128x128).
+3. **Macros**: what each of the 4 keys does — preset shortcuts or free text.
+4. **LEDs**: a single color (all 6 LEDs move together, by hardware design)
+   + brightness.
+5. **Extra games**: launches Snake or Memory, both run on the PC (separate
+   from the secret minigame that lives inside the pad itself).
 
-**Importante**: "Guardar en el pad" es lo que hace que texto/macros/color
-sobrevivan sin la PC conectada. Sin ese paso se pierden al desconectar
-(la imagen nunca se guarda en el pad, ver `firmware/README.md`).
+**Important**: "Save to pad" is what makes text/macros/color survive
+without the PC connected. Without that step they're lost on disconnect
+(the image is never saved on the pad, see `firmware/README.md`).

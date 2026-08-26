@@ -1,7 +1,7 @@
 """
-Comunicación serial con el HACK-PAD.
-Protocolo de texto (ver firmware/src/serial_protocol.cpp) + transferencia
-binaria cruda para imágenes (IMG_START + 128*128*2 bytes RGB565).
+Serial communication with the HACK-PAD.
+Text protocol (see firmware/src/serial_protocol.cpp) plus raw binary
+transfer for images (IMG_START + 128*128*2 bytes RGB565).
 """
 import serial
 import serial.tools.list_ports
@@ -25,7 +25,7 @@ class HackPadLink:
 
     def connect(self, port):
         self.ser = serial.Serial(port, BAUD, timeout=2)
-        time.sleep(2)  # el SAMD21 resetea al abrir el puerto USB CDC
+        time.sleep(2)  # the board resets when the USB CDC port is opened
         self.ser.reset_input_buffer()
 
     def disconnect(self):
@@ -66,8 +66,8 @@ class HackPadLink:
         return lines
 
     def send_image_rgb565(self, rgb565_bytes):
-        """rgb565_bytes debe medir exactamente 128*128*2 = 32768 bytes,
-        en orden de fila por fila, big-endian por pixel."""
+        """rgb565_bytes must be exactly 128*128*2 = 32768 bytes long,
+        row by row, big-endian per pixel."""
         assert len(rgb565_bytes) == SCREEN_W * SCREEN_H * 2
         self.ser.write(b"IMG_START\n")
         self.ser.write(rgb565_bytes)

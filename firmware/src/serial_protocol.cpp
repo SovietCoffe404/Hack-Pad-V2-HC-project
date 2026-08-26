@@ -5,22 +5,22 @@
 #include "keys.h"
 
 // ============================================================================
-// Protocolo por Serial (USB CDC), texto plano terminado en '\n':
+// Serial protocol (USB CDC), plain text terminated with '\n':
 //
 //   PING                          -> "OK HACKPAD v1"
-//   SET_TEXT <texto>              -> cambia el texto de la pantalla principal
-//   SET_MACRO <1-4> <texto|@ATAJO>-> asigna macro a una tecla
-//   SET_COLOR <RRGGBB>            -> color de los 6 LEDs (comparten DIN en
-//                                    paralelo a propósito, así que siempre
-//                                    van todos iguales; hex sin '#')
+//   SET_TEXT <text>               -> changes the main screen text
+//   SET_MACRO <1-4> <text|@SHORTCUT> -> assigns a macro to a key
+//   SET_COLOR <RRGGBB>            -> color of the 6 LEDs (they share DIN in
+//                                    parallel on purpose, so they always
+//                                    move together; hex without '#')
 //   SET_BRIGHTNESS <0-255>
-//   SAVE                          -> persiste todo a NVS (flash)
-//   GET_CONFIG                    -> vuelca la config actual (incluye estado BLE)
-//   IMG_START                     -> el firmware espera EXACTAMENTE 128*128*2
-//                                    bytes crudos RGB565 (big-endian) a
-//                                    continuación, sin saltos de línea.
-//                                    La imagen se dibuja directo (streaming,
-//                                    no se guarda en flash — ver README).
+//   SAVE                          -> persists everything to NVS (flash)
+//   GET_CONFIG                    -> dumps the current config (includes BLE status)
+//   IMG_START                     -> the firmware then expects EXACTLY 128*128*2
+//                                    raw RGB565 bytes (big-endian), with no
+//                                    line breaks. The image is drawn straight
+//                                    through (streaming, not saved to flash —
+//                                    see README).
 // ============================================================================
 
 static char lineBuf[96];
@@ -59,9 +59,9 @@ static void sendConfigDump() {
   Serial.println("OK");
 }
 
-// Recibe 128*128 px RGB565 (big-endian) y los pinta directo en la pantalla,
-// SIN guardarlos en un buffer completo: el SAMD21 solo tiene 32KB de RAM
-// y guardar los 32KB de la imagen se comería toda la memoria.
+// Receives 128*128 px RGB565 (big-endian) and draws them straight onto the
+// screen, WITHOUT buffering the full image: keeping the whole 32KB image in
+// RAM is wasteful and unnecessary now that we stream it pixel by pixel.
 static void handleImageTransfer() {
   const uint32_t totalBytes = (uint32_t)SCREEN_W * SCREEN_H * 2;
   Adafruit_SSD1351 &t = display_raw();
@@ -88,7 +88,7 @@ static void handleImageTransfer() {
         received += 2;
       }
     } else if (millis() - lastByteAt > 3000) {
-      break; // timeout: la app de PC se cortó o tardó demasiado
+      break; // timeout: the PC app disconnected or took too long
     }
   }
   t.endWrite();

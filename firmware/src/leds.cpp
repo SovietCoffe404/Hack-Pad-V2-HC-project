@@ -13,9 +13,9 @@ void leds_init() {
 
 void leds_apply_config() {
   strip.setBrightness(cfg.brightness);
-  // Los 6 LEDs comparten el mismo DIN en paralelo (adrede), así que solo
-  // tiene sentido un color "maestro": los 6 van a mostrar lo mismo sin
-  // importar qué le mandemos a cada índice individual.
+  // The 6 LEDs share the same DIN in parallel (on purpose), so only a
+  // single "master" color makes sense: all 6 will show the same thing
+  // regardless of what we send to each individual index.
   for (int i = 0; i < NUM_LEDS; i++) {
     strip.setPixelColor(i, strip.Color(cfg.ledColor[0], cfg.ledColor[1], cfg.ledColor[2]));
   }

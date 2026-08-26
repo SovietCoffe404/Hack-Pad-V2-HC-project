@@ -15,7 +15,7 @@ void setup() {
   config_load();
   display_init();
   leds_init();
-  keys_init();        // también arranca el BLE keyboard (bleKeyboard.begin())
+  keys_init();        // also starts the BLE keyboard (bleKeyboard.begin())
   protocol_init();
 
   leds_apply_config();
@@ -26,8 +26,8 @@ void loop() {
   keys_update();
   protocol_update();
 
-  // Actualiza el puntito de estado BLE en la pantalla cada medio segundo,
-  // sin repintar todo el home screen a cada rato.
+  // Updates the BLE status dot on screen every half second, without
+  // repainting the whole home screen constantly.
   uint32_t now = millis();
   if (now - lastBleCheck > 500) {
     lastBleCheck = now;
@@ -40,6 +40,6 @@ void loop() {
   }
 
   if (keys_secret_combo_triggered()) {
-    snake_run(); // bloqueante hasta que el jugador sale con SW4
+    snake_run(); // blocking until the player exits with SW4
   }
 }

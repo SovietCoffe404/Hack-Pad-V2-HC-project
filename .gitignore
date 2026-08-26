@@ -16,15 +16,15 @@ env/
 *.egg-info/
 
 # ---- KiCad ----
-# Backups automáticos que genera KiCad al guardar (no aportan nada al repo,
-# y pesan mucho con el tiempo)
+# Automatic backups KiCad generates on save (add nothing to the repo,
+# and grow large over time)
 hardware/*-backups/
 *.kicad_pcb-bak
 *.kicad_sch-bak
 fp-info-cache
 *.lck
 
-# ---- Sistema operativo ----
+# ---- OS ----
 .DS_Store
 Thumbs.db
 desktop.ini

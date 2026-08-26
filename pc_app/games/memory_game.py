@@ -1,5 +1,5 @@
-"""Simon Says / juego de memoria, tema HACK-PAD (4 botones de color, como
-las 4 teclas del pad). Se puede ejecutar suelto: python memory_game.py"""
+"""Simon Says / memory game, HACK-PAD themed (4 colored buttons, like the
+pad's 4 keys). Can be run standalone: python memory_game.py"""
 import pygame
 import random
 import sys
@@ -7,10 +7,10 @@ import time
 
 W, H = 420, 500
 COLORS = [
-    ("Rosa",     (255, 0, 80),   (120, 0, 40)),
-    ("Naranja",  (255, 120, 0),  (120, 55, 0)),
-    ("Amarillo", (255, 220, 0),  (120, 100, 0)),
-    ("Celeste",  (0, 160, 255),  (0, 70, 120)),
+    ("Pink",   (255, 0, 80),   (120, 0, 40)),
+    ("Orange", (255, 120, 0),  (120, 55, 0)),
+    ("Yellow", (255, 220, 0),  (120, 100, 0)),
+    ("Cyan",   (0, 160, 255),  (0, 70, 120)),
 ]
 PAD_RECT = [
     pygame.Rect(20, 20, 180, 180),
@@ -46,8 +46,7 @@ def run():
 
     sequence = []
     player_pos = 0
-    state = "show"  # show | wait | over
-    level_delay = 0
+    state = "show"  # show | wait | grow | over
     last_step_time = 0
 
     def new_round():
@@ -58,7 +57,7 @@ def run():
         last_step_time = time.time()
 
     new_round()
-    draw_board(screen, font, f"Nivel {len(sequence)}")
+    draw_board(screen, font, f"Level {len(sequence)}")
     show_index = 0
 
     running = True
@@ -89,20 +88,20 @@ def run():
                 else:
                     show_index = 0
                     state = "wait"
-                    draw_board(screen, font, f"Nivel {len(sequence)} - tu turno")
+                    draw_board(screen, font, f"Level {len(sequence)} - your turn")
 
         elif state == "grow":
             if time.time() - last_step_time > 0.6:
                 new_round()
-                draw_board(screen, font, f"Nivel {len(sequence)}")
+                draw_board(screen, font, f"Level {len(sequence)}")
 
         elif state == "over":
-            draw_board(screen, font, f"Perdiste en nivel {len(sequence)} - ESC para salir, click para reiniciar")
+            draw_board(screen, font, f"You lost at level {len(sequence)} - ESC to quit, click to restart")
             for event2 in pygame.event.get():
                 if event2.type == pygame.MOUSEBUTTONDOWN:
                     sequence.clear()
                     new_round()
-                    draw_board(screen, font, f"Nivel {len(sequence)}")
+                    draw_board(screen, font, f"Level {len(sequence)}")
                     show_index = 0
 
         pygame.time.delay(16)

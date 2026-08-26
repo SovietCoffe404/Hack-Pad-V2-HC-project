@@ -1,4 +1,4 @@
 #pragma once
 #include <Arduino.h>
 
-void snake_run();  // bloqueante: corre el juego hasta que el jugador sale (SW4)
+void snake_run();  // blocking: runs the game until the player exits (SW4)

@@ -1,8 +1,8 @@
 #include "keys.h"
 #include "config.h"
 
-// El pad se presenta como teclado Bluetooth LE (no hay USB HID nativo en
-// el ESP32-C3, solo un puerto serie por USB — ver serial_protocol.cpp).
+// The pad presents itself as a Bluetooth LE keyboard (there's no native
+// USB HID on the ESP32-C3, only a USB serial port — see serial_protocol.cpp).
 BleKeyboard bleKeyboard("HACK-PAD", "Santi", 100);
 
 static const uint8_t PINS[4] = {PIN_KEY1, PIN_KEY2, PIN_KEY3, PIN_KEY4};
@@ -11,7 +11,7 @@ static bool lastState[4]      = {false, false, false, false};
 static uint32_t lastChange[4] = {0, 0, 0, 0};
 static const uint32_t DEBOUNCE_MS = 25;
 
-// --- combo secreto: mantener las 4 teclas juntas HOLD_MS ---
+// --- secret combo: hold all 4 keys together for HOLD_MS ---
 static const uint32_t HOLD_MS = 1200;
 static uint32_t allHeldSince = 0;
 static bool comboFired = false;
@@ -21,10 +21,10 @@ void keys_init() {
   bleKeyboard.begin();
 }
 
-// Presiona una combinación de modificadores + tecla y suelta.
-// Mismos nombres de constante que Arduino Keyboard.h (BleKeyboard los
-// define compatibles a propósito), así que esta lógica es casi idéntica
-// a la versión con cable.
+// Presses a modifier + key combo and releases it.
+// Same constant names as Arduino's Keyboard.h (BleKeyboard defines
+// compatible ones on purpose), so this logic is nearly identical to the
+// wired version.
 static void sendCombo(uint8_t modifier, uint8_t key) {
   if (!bleKeyboard.isConnected()) return;
   if (modifier) bleKeyboard.press(modifier);
@@ -33,10 +33,10 @@ static void sendCombo(uint8_t modifier, uint8_t key) {
   bleKeyboard.releaseAll();
 }
 
-// Traduce atajos con prefijo "@" a combinaciones reales de teclado.
-// Si no matchea ninguno, se escribe el texto literal tal cual.
+// Translates "@"-prefixed shortcuts into real key combos.
+// If nothing matches, the literal text is typed as-is.
 static void executeMacroString(const char *m) {
-  if (!bleKeyboard.isConnected()) return; // sin conexión BLE no hay a quién mandarle nada
+  if (!bleKeyboard.isConnected()) return; // no BLE connection, nothing to send to
 
   if (m[0] != '@') {
     bleKeyboard.print(m);
@@ -54,7 +54,7 @@ static void executeMacroString(const char *m) {
   else if (!strcmp(m, "@ESC"))    sendCombo(0, KEY_ESC);
   else if (!strcmp(m, "@TAB"))    sendCombo(0, KEY_TAB);
   else {
-    // atajo desconocido -> lo escribe tal cual para que el usuario lo note
+    // unknown shortcut -> type it literally so the user notices
     bleKeyboard.print(m);
   }
 }
@@ -74,12 +74,12 @@ void keys_update() {
   uint32_t now = millis();
   bool current[4];
   for (int i = 0; i < 4; i++) {
-    bool raw = (digitalRead(PINS[i]) == LOW); // pull-up: LOW = presionado
+    bool raw = (digitalRead(PINS[i]) == LOW); // pull-up: LOW = pressed
     if (raw != lastState[i] && (now - lastChange[i]) > DEBOUNCE_MS) {
       lastChange[i] = now;
       lastState[i] = raw;
       if (raw) {
-        // flanco de bajada -> presionado: si NO están las 4 abajo, es un macro normal
+        // falling edge -> pressed: if NOT all 4 are down, it's a normal macro
         bool allDown = true;
         for (int j = 0; j < 4; j++) {
           bool s = (j == i) ? true : (digitalRead(PINS[j]) == LOW);
