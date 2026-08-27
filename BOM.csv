@@ -4,7 +4,7 @@ U2 (SCREEN),1.5in 128x128 RGB OLED display SPI (SSD1351),Waveshare 1.5inch RGB O
 SW1-SW4,Cherry MX mechanical switch (PCB mount),Cherry MX (linear or tactile, buyer's choice),4,0.35,1.40,MechanicalKeyboards.com,https://mechanicalkeyboards.com/collections/cherry-switches,Any Cherry MX variant fits the footprint
 D1-D6,Addressable RGB LED PLCC4 5x5mm,OPSCO SK6812,6,0.07,0.42,LCSC,https://www.lcsc.com/product-detail/RGB-LEDs-Built-in-IC_OPSCO-Optoelectronics-SK6812_C5378720.html,Unit price drops toward $0.044 at higher volume
 R1,Resistor 330 ohm 1206 SMD,Generic 1206 thick-film resistor,1,0.02,0.02,LCSC,https://www.lcsc.com/,Any 1206 330R part works
-C1,Capacitor 1206 SMD (schematic value: 500uF),Generic 1206 capacitor,1,0.10,0.10,LCSC,https://www.lcsc.com/,"Value as labeled in the schematic; 500uF is unusually large for a 1206 package, double-check against the physical part before ordering"
+C1,Capacitor 1206 SMD (schematic value: 100nF),Generic 1206 capacitor,1,0.10,0.10,LCSC,https://www.lcsc.com/,"Value as labeled in the schematic; 500uF is unusually large for a 1206 package, double-check against the physical part before ordering"
 J1 (VIN),2-pin 1.00mm pitch header,Generic 1.00mm pitch header,1,0.15,0.15,Generic (LCSC/Amazon),https://www.lcsc.com/,Connects the off-board battery/charger
 PCB,Custom 2-layer PCB (fabricated from hardware/*.kicad_pcb),Custom fab,1,5.00,5.00,JLCPCB,https://jlcpcb.com/,Approx. price for a small prototype batch (5pcs); price drops per-board at higher qty
 -,TP4056 protected Li-ion charging module (USB-C),Generic TP4056 w/ protection,1,1.99,1.99,Amazon,https://www.amazon.com/TP4056/s?k=TP4056,Off-board; wired to J1 (VIN). Cheaper per-unit in multi-packs
