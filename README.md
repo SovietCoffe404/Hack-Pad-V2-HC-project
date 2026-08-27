@@ -28,7 +28,7 @@ HACK-PAD/
 └── production/   Files for manufacturing the project (Gerber and .STEP files)
 ```
 
-Each folder has its own README with the details
+Each folder has its own README with the details, such like the PINOUT and clarifications about some things you may have doubts on :) 
 
 ## Pinout (Seeed XIAO ESP32-C3)
 
@@ -85,8 +85,19 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 
 ## Screen Shots!
 
+<img width="269" height="350" alt="Screenshot 2026-08-25 124445" src="https://github.com/user-attachments/assets/57dff823-78fc-4db9-b97f-e2bf9d4f8c6a" />
+
+<img width="392" height="266" alt="Screenshot 2026-08-23 134833" src="https://github.com/user-attachments/assets/a5ac759a-d925-4f4e-998b-c7fa6ee18c80" />
+
+<img width="461" height="299" alt="Screenshot 2026-08-26 154640" src="https://github.com/user-attachments/assets/6fef6c26-5d16-42cc-927a-d03d297d1b54" />
+
+<img width="566" height="286" alt="Screenshot 2026-08-27 131850" src="https://github.com/user-attachments/assets/7ec89ceb-b461-4cf8-9bda-0ab4a03d65e4" />
 
 ## License
 
 MIT — see [`LICENSE`](LICENSE). Use, modify, and share the project
 freely, with or without credit.
+
+## ★ Special thanks to:
+`https://www.printables.com/@wireva` for the keycaps 3d model! :D
+`hackclub.com` for the DIY guide and funding! <3
