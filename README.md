@@ -97,6 +97,8 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 
 <img width="15247" height="4320" alt="jhjhghcvfgc  " src="https://github.com/user-attachments/assets/8466db94-a98a-4b03-ab76-d6f569df8152" />
 
+<img width="3840" height="2160" alt="3D_HACK-PAD_2026-Aug-27_08-37-06PM-000_CustomizedView8673833641" src="https://github.com/user-attachments/assets/7b36a1b4-f58e-4fc3-8dcf-19d46a5b6b6a" />
+
 ## License
 
 MIT — see [`LICENSE`](LICENSE). Use, modify, and share the project
