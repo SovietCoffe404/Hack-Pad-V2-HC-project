@@ -4,13 +4,13 @@
 
 | File | For what? |
 |---|---|
-| `platformio.ini` | Board config (`seeed_xiao_esp32c3`) and libraries — installed automatically |
-| `src/main.cpp` | Starts everything, updates the on-screen BLE indicator |
-| `src/config.h` / `config.cpp` | Saves text, macros, and LED color to NVS (flash) via `Preferences` |
-| `src/display.h` / `display.cpp` | Drives the OLED (text, images, BLE status dot) |
-| `src/leds.h` / `leds.cpp` | Drives the 6 SK6812 LEDs |
+| `platformio.ini` | Board config (`seeed_xiao_esp32c3`) and libraries |
+| `src/main.cpp` | Starts everything, updates the on-screen indicator |
+| `src/config.h` / `config.cpp` | Saves text, macros, and LED color to NVS `Preferences` |
+| `src/display.h` / `display.cpp` | Drives our OLED display |
+| `src/leds.h` / `leds.cpp` | Drives the LEDs |
 | `src/keys.h` / `keys.cpp` | Reads the 4 buttons, runs macros over, detects the secret combo of keys ;D |
-| `src/game_snake.h` / `game_snake.cpp` | The secret minigame: Snake on the OLED |
+| `src/game_snake.h` / `game_snake.cpp` | The secret minigame |
 | `src/serial_protocol.h` / `serial_protocol.cpp` | USB (serial) protocol that talks to `pc_app/` |
 
 ## Flashing (PlatformIO + VS Code)
