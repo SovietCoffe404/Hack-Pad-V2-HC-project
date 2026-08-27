@@ -1,12 +1,12 @@
-# pc_app/
+# pc_app
 
-Desktop app in Python (Tkinter) to configure the HACK-PAD over USB.
+Desktop app in Python to configure the HACK-PAD over USB.
 
 ## Structure
 
-| File | What it does |
+| File | For what? |
 |---|---|
-| `hackpad_app.py` | Main app — Screen / Macros / LEDs / Extra games tabs |
+| `hackpad_app.py` | Main app — Screen / Macros / LEDs / Extra games |
 | `serial_link.py` | USB communication with the pad (protocol from `firmware/`) |
 | `image_convert.py` | Converts any image to 128x128 RGB565 |
 | `games/snake_game.py` | Extra Snake, played with the PC keyboard |
