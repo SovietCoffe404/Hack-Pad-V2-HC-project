@@ -9,7 +9,7 @@ Hiii, well this is my second version of the Hack Pad since the other one was kin
 - 🌈 **RGB LEDs with configurable color** — Also custom! choose the color u want in the app.
 - 🎮 **Secret minigame** — Snake hidden inside the pad itself
 
-`Hint`: Press all keys down at the same time
+       `Hint`: Press all keys down at the same time
 
 - 🕹️ **Extra minigames on the PC** — Snake and Simon Says, run from the desktop app.
 - 🔌 **USB cable** — only used to configure the pad from the PC app (text, macros, colors, image); normal macros go over BLE.
