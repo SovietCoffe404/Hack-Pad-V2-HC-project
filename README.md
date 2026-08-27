@@ -11,9 +11,9 @@ Hiii, well this is my second version of the Hack Pad since the other one was kin
 
   `Hint`: Press all keys down at the same time
 
-- 🕹️ **Extra minigames on the PC** — Snake and Simon Says, run from the desktop app.
-- 🔌 **USB cable** — only used to configure the pad from the PC app (text, macros, colors, image); normal macros go over BLE.
-- 🔋 Battery-powered (14500 Li-ion + TP4056 charging).
+- 🕹️ **Extra minigames on the PC** — U can add more minigames!
+- 🔌 **USB cable** — only used to configure the pad from the PC app.
+- 🔋 **Battery** (14500 Li-ion + TP4056 charging) you can replace it whenever is needed.
 
 ## Repo structure
 
@@ -27,23 +27,7 @@ HACK-PAD/
 
 Each folder has its own README with the details
 
-## Getting started
-
-1. **Build/solder the board** — see `hardware/` for the schematic,
-   layout, and the 3D model for printing the case. The module to solder
-   is a **Seeed XIAO ESP32-C3** (see the compatibility note in
-   `hardware/README.md`).
-2. **Flash the firmware** — see `firmware/README.md` (PlatformIO + VS Code).
-3. **Pair over Bluetooth** — look for "HACK-PAD" in your PC/phone's
-   Bluetooth settings (details in `firmware/README.md`).
-4. **Install the PC app** — see `pc_app/README.md` (`pip install -r
-   requirements.txt` and you're set) — connects over the USB cable.
-
 ## Pinout (Seeed XIAO ESP32-C3)
-
-Traced directly from the original PCB's netlist, not a generic
-pinout — and confirmed to match the XIAO ESP32-C3 (same family, same
-hardware SPI pins):
 
 | XIAO pin | Connected to |
 |---|---|
@@ -74,13 +58,9 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 | SW1–SW4 | Cherry MX mechanical switch, PCB mount | Cherry MX (any linear/tactile variant) | 4 | $0.35 | $1.40 | [MechanicalKeyboards.com](https://mechanicalkeyboards.com/collections/cherry-switches) |
 | D1–D6 | Addressable RGB LED, PLCC4 5x5mm | [OPSCO SK6812](https://www.lcsc.com/product-detail/RGB-LEDs-Built-in-IC_OPSCO-Optoelectronics-SK6812_C5378720.html) | 6 | $0.07 | $0.42 | LCSC |
 | R1 | Resistor, 330Ω, 1206 SMD | Generic 1206 | 1 | $0.02 | $0.02 | LCSC |
-| C1 | Capacitor, 1206 SMD (schematic value: 500µF*) | Generic 1206 | 1 | $0.10 | $0.10 | LCSC |
+| C1 | Capacitor, 1206 SMD (schematic value: 100nF) | Generic 1206 | 1 | $0.10 | $0.10 | LCSC |
 | J1 (VIN) | 2-pin header, 1.00mm pitch | Generic | 1 | $0.15 | $0.15 | LCSC / Amazon |
 | — | Custom 2-layer PCB | Fabricated from `hardware/*.kicad_pcb` | 1 | $5.00 | $5.00 | [JLCPCB](https://jlcpcb.com/) |
-
-\* 500µF is an unusually large value for a 1206 ceramic package — that's
-the value as labeled in the schematic. Double-check it against the
-physical part (could be a tantalum/polymer cap, or a typo) before ordering.
 
 ## Off-board (wired in via the VIN header, not soldered to this PCB)
 
