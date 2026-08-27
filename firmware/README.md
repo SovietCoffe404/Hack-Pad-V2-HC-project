@@ -1,4 +1,4 @@
-# firmware/
+# Firmware
 
 ## Structure
 
@@ -16,30 +16,21 @@
 ## Build and flash (PlatformIO + VS Code)
 
 1. Install [VS Code](https://code.visualstudio.com/) and the **PlatformIO IDE** extension.
-2. `File > Open Folder` → select this folder (`firmware/`).
-3. Connect the XIAO ESP32-C3 over USB-C.
-4. Click the PlatformIO icon → **Upload** (or `Ctrl+Alt+U`). If it doesn't
-   drop into bootloader mode on its own, hold BOOT, tap RESET, then
-   release BOOT (typical for ESP32 boards).
+2. `File > Open Folder` → select the folder (`firmware/`).
+3. Connect the XIAO over USB-C.
+4. Click the PlatformIO icon → **Upload** (or `Ctrl+Alt+U`).
 5. Open the Serial Monitor (115200 baud) and try sending `PING` — it
-   should reply `OK HACKPAD v1`.
+   should reply `OK HACKPAD v2`.
 
 ## Pairing over Bluetooth
 
 1. With the firmware running, open the Bluetooth settings on your
    PC/phone and look for a device named **"HACK-PAD"**.
-2. Pair it like any Bluetooth keyboard (usually no PIN required).
+2. Pair it like any Bluetooth device.
 3. The dot in the top-right corner of the screen turns **green** when
-   there's an active BLE connection, and gray when there isn't.
-4. Once paired, the 4 keys send their macros over Bluetooth — the cable
-   is no longer required (it still works for reconfiguring from
+   there's an active connection, and gray when there's not.
+4. Once paired, the 4 keys send their macros over Bluetooth (it still works for reconfiguring from
    `pc_app/`, in parallel).
-
-## Activating the secret minigame
-
-Hold all 4 keys down together for ~1.2 seconds. Controls: SW1/SW2 turn
-left/right, SW3 pauses, SW4 exits. (Works the same whether or not BLE is
-connected — it's entirely local.)
 
 ## Serial protocol (USB, 115200 baud, plain text `\n`)
 
