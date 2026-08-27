@@ -13,7 +13,7 @@
 | `src/game_snake.h` / `game_snake.cpp` | The secret minigame: Snake on the OLED |
 | `src/serial_protocol.h` / `serial_protocol.cpp` | USB (serial) protocol that talks to `pc_app/` |
 
-## Build and flash (PlatformIO + VS Code)
+## Flashing (PlatformIO + VS Code)
 
 1. Install [VS Code](https://code.visualstudio.com/) and the **PlatformIO IDE** extension.
 2. `File > Open Folder` → select the folder (`firmware/`).
@@ -22,14 +22,13 @@
 5. Open the Serial Monitor (115200 baud) and try sending `PING` — it
    should reply `OK HACKPAD v2`.
 
-## Pairing over Bluetooth
+## Pairing by Bluetooth
 
 1. With the firmware running, open the Bluetooth settings on your
    PC/phone and look for a device named **"HACK-PAD"**.
 2. Pair it like any Bluetooth device.
-3. The dot in the top-right corner of the screen turns **green** when
-   there's an active connection, and gray when there's not.
-4. Once paired, the 4 keys send their macros over Bluetooth (it still works for reconfiguring from
+3. Once paired the top-right corner should be green, if it doesn't try to connect again.
+4. The 4 keys send their macros over Bluetooth (it still works for reconfiguring from
    `pc_app/`, in parallel).
 
 ## Serial protocol (USB, 115200 baud, plain text `\n`)
