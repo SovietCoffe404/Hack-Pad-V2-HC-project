@@ -24,7 +24,9 @@ Hiii, well this is my second version of the Hack Pad since the other one was kin
 HACK-PAD/
 ├── firmware/     C++ firmware (PlatformIO) flashed onto the XIAO
 ├── pc_app/       Desktop app in Python to configure the pad
-├── hardware/     KiCad project (schematic, PCB, 3D models)
+├── hardware/     KiCAD and Fusion project (schematic, PCB, 3D models)
+| ├── PCB/ KiCAD
+| └── CAD/ 
 └── production/   Files for manufacturing (Gerber and .STEP files)
 ```
 
