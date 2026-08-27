@@ -93,8 +93,6 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 
 <img width="566" height="286" alt="Screenshot 2026-08-27 131850" src="https://github.com/user-attachments/assets/7ec89ceb-b461-4cf8-9bda-0ab4a03d65e4" />
 
-<img width="15247" height="4320" alt="gghtg" src="https://github.com/user-attachments/assets/686b0cec-d1c2-41f0-8f88-ee6db8c6e4d6" />
-
 <img width="15247" height="4320" alt="3D HACK-PAD" src="https://github.com/user-attachments/assets/7c5693a5-3ada-4bca-98b4-d1e0525cddf6" />
 
 <img width="15247" height="4320" alt="jhjhghcvfgc  " src="https://github.com/user-attachments/assets/8466db94-a98a-4b03-ab76-d6f569df8152" />
