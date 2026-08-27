@@ -4,10 +4,10 @@ Hiii, well this is my second version of the Hack Pad since the other one was kin
 
 ## What it does
 
-- 🖥️ **Custom screen** — your own text or image, set from the PC app.
-- ⌨️ **4 keys with editable macros** — shortcuts (copy/paste/undo/etc.) or free text, sent over **Bluetooth LE** as if it were a real keyboard.
-- 🌈 **RGB LEDs with configurable color** — the 6 SK6812s all show the same color (they share data in parallel, by design).
-- 🎮 **Secret minigame** — Snake hidden inside the pad itself, triggered by holding all 4 keys down.
+- 🖥️ **Custom screen** — Showing anything u want, text or image. Upload it by the PC app!
+- ⌨️ **4 keys with editable macros** — Customizable key macros (copy, paste, undo, etc.)
+- 🌈 **RGB LEDs with configurable color** — Also custom! choose the color u want in the app.
+- 🎮 **Secret minigame** — Snake hidden inside the pad itself 
 - 🕹️ **Extra minigames on the PC** — Snake and Simon Says, run from the desktop app.
 - 🔌 **USB cable** — only used to configure the pad from the PC app (text, macros, colors, image); normal macros go over BLE.
 - 🔋 Battery-powered (14500 Li-ion + TP4056 charging).
