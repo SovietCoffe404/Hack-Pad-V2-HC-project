@@ -100,4 +100,5 @@ freely, with or without credit.
 
 ## ★ Special thanks to:
 `https://www.printables.com/@wireva` for the keycaps 3d model! :D
+
 `hackclub.com` for the DIY guide and funding! <3
