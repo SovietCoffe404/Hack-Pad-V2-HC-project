@@ -1,4 +1,4 @@
-# pc_app
+# App
 
 Desktop app in Python to configure the HACK-PAD over USB.
 
