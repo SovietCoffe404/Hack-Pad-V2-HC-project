@@ -2,6 +2,9 @@
 
 Hiii, well this is my second version of the Hack Pad since the other one was kinda lame though, so I added new functions to it so it's more fun and useful. You can check out the functions down here :D
 
+# Based on:
+**https://hackpad.hackclub.com**
+
 ## What it does
 
 - 🖥️ **Custom screen** — Showing anything u want, text or image. Upload it by the PC app!
