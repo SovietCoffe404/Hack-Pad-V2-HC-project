@@ -1,7 +1,4 @@
-# hardware/
-
-KiCad 8 project for the HACK-PAD V2 (4-key macropad with color OLED screen
-and RGB LEDs).
+# Hardware
 
 | File | What it is |
 |---|---|
