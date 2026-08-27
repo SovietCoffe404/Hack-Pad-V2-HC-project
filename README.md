@@ -25,8 +25,8 @@ HACK-PAD/
 ├── firmware/     C++ firmware (PlatformIO) flashed onto the XIAO
 ├── pc_app/       Desktop app in Python to configure the pad
 ├── hardware/     KiCAD and Fusion project (schematic, PCB, 3D models)
-| ├── PCB/ KiCAD
-| └── CAD/ 
+| ├── PCB/        KiCAD project
+| └── CAD/        3D models
 └── production/   Files for manufacturing (Gerber and .STEP files)
 ```
 
@@ -52,7 +52,7 @@ Plain text over USB, 115200 baud — full command reference in
 ```
 PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONFIG · IMG_START
 ```
-# Bill of Materials — HACK-PAD V2
+# BOM — HACK-PAD V2
 
 ## On-board (populated on the HACK-PAD PCB)
 
