@@ -10,7 +10,7 @@ Hiii, well this is my second version of the Hack Pad since the other one was kin
 - 🖥️ **Custom screen** — Showing anything u want, text or image. Upload it by the PC app!
 - ⌨️ **4 keys with editable macros** — Customizable key macros (copy, paste, undo, etc.)
 - 🌈 **RGB LEDs with configurable color** — Also custom! choose the color u want in the app.
-- 🎮 **Secret minigame** — Snake hidden inside the pad itself
+- 🎮 **Secret minigame** — Snake hidden inside the pad
 
   `Hint`: Press all keys down at the same time
 
@@ -22,10 +22,10 @@ Hiii, well this is my second version of the Hack Pad since the other one was kin
 
 ```
 HACK-PAD/
-├── firmware/     C++ firmware (PlatformIO) flashed onto the XIAO ESP32-C3
+├── firmware/     C++ firmware (PlatformIO) flashed onto the XIAO
 ├── pc_app/       Desktop app in Python to configure the pad
 ├── hardware/     KiCad project (schematic, PCB, 3D models)
-└── production/   Files for manufacturing the project (Gerber and .STEP files)
+└── production/   Files for manufacturing (Gerber and .STEP files)
 ```
 
 Each folder has its own README with the details, such like the PINOUT and clarifications about some things you may have doubts on :) 
