@@ -1,25 +1,15 @@
 # firmware/
 
-Firmware for the HACK-PAD, targeting a **Seeed XIAO ESP32-C3** — wireless
-over Bluetooth LE. A **PlatformIO** project.
-
-> This project used to run on a XIAO SAMD21 over a USB cable. The
-> wireless version swaps the module for a XIAO ESP32-C3 (same footprint,
-> no board redesign needed) and the keyboard now sends keystrokes over
-> Bluetooth LE instead of USB HID — the ESP32-C3 has no USB HID
-> controller, only a USB serial port, which is still used to configure
-> the pad from `pc_app/`.
-
 ## Structure
 
-| File | What it does |
+| File | For what? |
 |---|---|
 | `platformio.ini` | Board config (`seeed_xiao_esp32c3`) and libraries — installed automatically |
 | `src/main.cpp` | Starts everything, updates the on-screen BLE indicator |
 | `src/config.h` / `config.cpp` | Saves text, macros, and LED color to NVS (flash) via `Preferences` |
 | `src/display.h` / `display.cpp` | Drives the OLED (text, images, BLE status dot) |
 | `src/leds.h` / `leds.cpp` | Drives the 6 SK6812 LEDs |
-| `src/keys.h` / `keys.cpp` | Reads the 4 buttons, runs macros over **BLE HID** (`BleKeyboard`), detects the secret combo |
+| `src/keys.h` / `keys.cpp` | Reads the 4 buttons, runs macros over, detects the secret combo of keys ;D |
 | `src/game_snake.h` / `game_snake.cpp` | The secret minigame: Snake on the OLED |
 | `src/serial_protocol.h` / `serial_protocol.cpp` | USB (serial) protocol that talks to `pc_app/` |
 
@@ -67,16 +57,3 @@ IMG_START            (then send 128*128*2 raw RGB565 bytes, no \n)
 Preset shortcuts (`@SHORTCUT`): `@COPY @PASTE @CUT @UNDO @REDO @SAVE
 @SELECTALL @ALTTAB @ENTER @ESC @TAB`. Any other text is typed out literally.
 
-## Technical notes
-
-- **Why BLE and not WiFi**: for a battery-powered device that only needs
-  to send keystrokes, BLE uses much less power — with WiFi the 14500
-  battery would last noticeably less.
-- **Why the cable still works**: the ESP32-C3 has a USB-serial port built
-  into the chip itself (not HID), so `Serial` still works exactly like
-  before for talking to `pc_app/`.
-- **Memory**: the ESP32-C3 has 320KB of RAM and 4MB of flash — much more
-  than the original SAMD21. The custom screen image still isn't persisted
-  (it's sent fresh each session from the app), but there's now plenty of
-  flash headroom to add that later if wanted (e.g. with LittleFS) — not
-  implemented yet.
