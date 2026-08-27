@@ -12,7 +12,7 @@ Hiii, well this is my second version of the Hack Pad since the other one was kin
   `Hint`: Press all keys down at the same time
 
 - 🕹️ **Extra minigames on the PC** — U can add more minigames!
-- 🔌 **USB cable** — only used to configure the pad from the PC app.
+- 🔌 **USB cable** — Only used to configure the pad from the PC app.
 - 🔋 **Battery** (14500 Li-ion + TP4056 charging) you can replace it whenever is needed.
 
 ## Repo structure
