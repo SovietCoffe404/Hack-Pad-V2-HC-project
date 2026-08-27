@@ -1,18 +1,18 @@
 # Hardware
 
-## `PCB/`
+## `PCB`
 
 | File | What it is |
 |---|---|
-| `PCB/HACK-PAD V2.kicad_pro` | Project — open this one from KiCad |
+| `PCB/HACK-PAD V2.kicad_pro` | Project — open this one on KiCad |
 | `PCB/HACK-PAD V2.kicad_sch` | Schematic |
 | `PCB/HACK-PAD V2.kicad_pcb` | Board layout |
 | `PCB/HACK-PAD V2.kicad_prl` | Local project preferences (not critical) |
-| `PCB/fp-lib-table` | Footprint library table used by the project |
-| `PCB/Hack Pad-V2 Gerber.zip` | Gerber files, ready to send to a fab/manufacturer |
-| `PCB/3D HACK-PAD.step` | 3D model of the assembled PCB itself (board + components) |
+| `PCB/fp-lib-table` | Footprint library |
+| `PCB/Hack Pad-V2 Gerber.zip` | Manufacturing the PCB |
+| `PCB/3D HACK-PAD.step` | 3D model of the assembled PCB |
 
-## `CAD/case_models/`
+## `CAD/case_models`
 
 | File | What it is |
 |---|---|
@@ -22,9 +22,9 @@
 | `CAD/case_models/3D HACK-PAD Body.step` | Our main case, it stores all the electronics |
 | `CAD/case_models/3D HACK-PAD Battery cover.step` | Case for the batteries compartment |
 
-## `CAD/keycap_models/`
+## `CAD/keycap_models`
 
-Individual `.stl` files, one per keycap icon (arrows, brand logos, symbols, etc.), ready to 3D-print. File name = icon name, e.g. `rocket-solid.stl`, `discord-brands.stl`, `wifi-solid.stl`.
+Individual `.stl` files, ready to 3D-print. :D
 
 ## Pinout
 
