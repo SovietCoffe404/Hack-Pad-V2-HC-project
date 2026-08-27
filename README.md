@@ -62,12 +62,6 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 ```
 # Bill of Materials — HACK-PAD V2
 
-Prices in USD, checked against supplier listings. Single-unit pricing —
-most parts get cheaper per-unit in bulk (LEDs, switches, headers, TP4056
-modules, batteries). Shipping and taxes are not included. The 3D-printed
-case has no fixed cost since it depends on your printer/filament or
-whichever print service you use.
-
 ## On-board (populated on the HACK-PAD PCB)
 
 | RefDes | Description | Manufacturer / Part | Qty | Unit Price | Line Total | Supplier |
