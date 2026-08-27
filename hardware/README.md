@@ -9,7 +9,9 @@
 | `fp-lib-table` | Footprint library table used by the project |
 | `3D_HACK-PAD_Assembled.step` | 3D model with all components mounted — for visualizing/rendering the full pad |
 | `3D_HACK-PAD_Printing.step` | Simplified 3D model (no electronics) — for 3D-printing the case/enclosure |
-
+| `3D_HACK-PAD Top.step` | The tops case of the model, it keeps everything in place |
+| `3D_HACK-PAD Body.step` | Our main case, it stores all the electronics |
+| `3D_HACK-PAD Battery cover.step` | Case for the batteries compartment |
 ## Pinout 
 
 | XIAO pin | Connected to |
