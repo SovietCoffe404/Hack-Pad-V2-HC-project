@@ -67,19 +67,19 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 | J1 (VIN) | 2-pin header, 1.00mm pitch | Generic | 1 | $0.15 | $0.15 | LCSC / Amazon |
 | — | Custom 2-layer PCB | Fabricated from `hardware/*.kicad_pcb` | 1 | $5.00 | $5.00 | [JLCPCB](https://jlcpcb.com/) |
 
-## Off-board (wired in via the VIN header, not soldered to this PCB)
+## Off-board (wired in via the VIN header, not on the PCB)
 
 | Description | Manufacturer / Part | Qty | Unit Price | Line Total | Supplier |
 |---|---|---|---|---|---|
 | TP4056 protected Li-ion charging module (USB-C) | Generic, with protection | 1 | $1.99 | $1.99 | [Amazon](https://www.amazon.com/TP4056/s?k=TP4056) |
 | 14500 Li-ion rechargeable cell, 3.7V | Generic protected cell | 1 | $6.99 | $6.99 | [Amazon](https://www.amazon.com/14500-battery-3-7v-li-ion-rechargeable/s?k=14500+battery+3.7v+li-ion+rechargeable) |
-| Hookup wire (22–24 AWG, short length) | Generic | 1 | $0.50 | $0.50 | Amazon / any electronics shop |
+| Jumper wires | Generic | 1 | $0.50 | $0.50 | Amazon |
 
 ## Enclosure (not included in the subtotal)
 
 | Description | Source | Cost |
 |---|---|---|
-| 3D-printed case (`hardware/3D_HACK-PAD_Printing.step`) | Print it yourself, or a service like JLC3DP |
+| 3D-printed case (`hardware/3D_HACK-PAD_Printing.step`) | Print it by yourself, or a service like JLC3DP |
 
 ## Subtotal
 
