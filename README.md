@@ -79,11 +79,11 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 
 | Description | Source | Cost |
 |---|---|---|
-| 3D-printed case (`hardware/3D_HACK-PAD_Printing.step`) | Print it yourself, or a service like JLC3DP / Craftcloud | Varies by filament/service |
+| 3D-printed case (`hardware/3D_HACK-PAD_Printing.step`) | Print it yourself, or a service like JLC3DP |
 
 ## Subtotal
 
-**On-board + off-board parts: ≈ $42.55** (excludes shipping, taxes, and the printed case)
+**On-board + off-board parts: ≈ $42.55** (excludes shipping, taxes, and the case)
 
 ## Screen Shots!
 
