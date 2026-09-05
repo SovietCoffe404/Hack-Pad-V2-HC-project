@@ -61,10 +61,9 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 | U1 | XIAO ESP32-C3 module (RISC-V, WiFi+BLE) | [Seeed Studio XIAO ESP32C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) | 1 | $4.99 | $4.99 | Seeed Studio |
 | U2 (SCREEN) | 1.5" 128x128 RGB OLED, SPI (SSD1351) | [Waveshare 1.5inch RGB OLED Module](https://www.waveshare.com/1.5inch-rgb-oled-module.htm) | 1 | $20.99 | $20.99 | Waveshare |
 | SW1–SW4 | Cherry MX mechanical switch, PCB mount | Cherry MX (any linear/tactile variant) | 4 | $0.35 | $1.40 | [MechanicalKeyboards.com](https://mechanicalkeyboards.com/collections/cherry-switches) |
-| D1–D6 | Addressable RGB LED, PLCC4 5x5mm | [OPSCO SK6812](https://www.lcsc.com/product-detail/RGB-LEDs-Built-in-IC_OPSCO-Optoelectronics-SK6812_C5378720.html) | 6 | $0.07 | $0.42 | LCSC |
+| D1–D6 | RGB LED, PLCC4 5x5mm | [OPSCO SK6812](https://www.lcsc.com/product-detail/RGB-LEDs-Built-in-IC_OPSCO-Optoelectronics-SK6812_C5378720.html) | 6 | $0.07 | $0.42 | LCSC |
 | R1 | Resistor, 330Ω, 1206 SMD | Generic 1206 | 1 | $0.02 | $0.02 | LCSC |
 | C1 | Capacitor, 1206 SMD (schematic value: 100nF) | Generic 1206 | 1 | $0.10 | $0.10 | LCSC |
-| J1 (VIN) | 2-pin header, 1.00mm pitch | Generic | 1 | $0.15 | $0.15 | LCSC / Amazon |
 | — | Custom 2-layer PCB | Fabricated from `hardware/*.kicad_pcb` | 1 | $5.00 | $5.00 | [JLCPCB](https://jlcpcb.com/) |
 
 ## Off-board (wired in via the VIN header, not on the PCB)
