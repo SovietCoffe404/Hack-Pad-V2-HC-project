@@ -20,7 +20,6 @@ Every file ready for manufacturing!
 | Dimensions | 60.05 mm × 91.05 mm |
 | Layers | 2 (F.Cu / B.Cu) |
 | Thickness | 1.6 mm |
-| Surface finish | No especificado |
 | Pad-to-pad / Pad-to-track / Track-to-track | 0.2 mm |
 | Minimum track width | 0.2 mm |
 
