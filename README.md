@@ -60,7 +60,7 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 |---|---|---|---|---|---|---|
 | U1 | XIAO ESP32-C3 module (RISC-V, WiFi+BLE) | [Seeed Studio XIAO ESP32C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) | 1 | $4.99 | $4.99 | Seeed Studio |
 | U2 (SCREEN) | 1.5" 128x128 RGB OLED, SPI (SSD1351) | [Waveshare 1.5inch RGB OLED Module](https://www.waveshare.com/1.5inch-rgb-oled-module.htm) | 1 | $20.99 | $20.99 | Waveshare |
-| SW1–SW4 | Cherry MX mechanical switch, PCB mount | Cherry MX (any linear/tactile variant) | 4 | $0.35 | $1.40 | [MechanicalKeyboards.com](https://mechanicalkeyboards.com/collections/cherry-switches) |
+| SW1–SW4 | Cherry MX mechanical switch, PCB mount | Cherry MX (any linear/tactile variant) | 4 | $0.35 | $1.40 | [MechanicalKeyboards.co](https://mechanicalkeyboards.com/collections/cherry-switches) |
 | D1–D6 | RGB LED, PLCC4 5x5mm | [OPSCO SK6812](https://www.lcsc.com/product-detail/RGB-LEDs-Built-in-IC_OPSCO-Optoelectronics-SK6812_C5378720.html) | 6 | $0.07 | $0.42 | LCSC |
 | R1 | Resistor, 330Ω, 1206 SMD | Generic 1206 | 1 | $0.02 | $0.02 | LCSC |
 | C1 | Capacitor, 1206 SMD (schematic value: 100nF) | Generic 1206 | 1 | $0.10 | $0.10 | LCSC |
@@ -70,8 +70,8 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 
 | Description | Manufacturer / Part | Qty | Unit Price | Line Total | Supplier |
 |---|---|---|---|---|---|
-| TP4056 protected Li-ion charging module (USB-C) | Generic, with protection | 1 | $1.99 | $1.99 | [Amazon](https://www.amazon.com/TP4056/s?k=TP4056) |
-| 14500 Li-ion rechargeable cell, 3.7V | Generic protected cell | 1 | $6.99 | $6.99 | [Amazon](https://www.amazon.com/14500-battery-3-7v-li-ion-rechargeable/s?k=14500+battery+3.7v+li-ion+rechargeable) |
+| TP4056 protected Li-ion charging module (USB-C) | Generic, with protection | 1 | $1.99 | $1.99 | [AliExpress](https://es.aliexpress.com/item/1005008927476478.html?spm=a2g0o.productlist.main.11.54d658c9kT2wZy&algo_pvid=a029871f-9f27-47d8-8982-c2caec298b3c&algo_exp_id=a029871f-9f27-47d8-8982-c2caec298b3c-10&pdp_ext_f=%7B"order"%3A"-1"%2C"spu_best_type"%3A"price"%2C"eval"%3A"1"%2C"fromPage"%3A"search"%7D&pdp_npi=6%40dis%21USD%211.74%211.74%21%21%2111.65%2111.65%21%402103081117886428617766381e0fd2%2112000047233885048%21sea%21MX%217457249807%21X%211%210%21n_tag%3A-29919%3Bd%3Aa5ac4bc3%3Bm03_new_user%3A-29895&curPageLogUid=Qe5zJJ3YYP9L&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008927476478%7C_p_origin_prod%3A) |
+| 14500 Li-ion rechargeable cell, 3.7V | Generic protected cell | 1 | $6.99 | $6.99 | [Mercado Libre](https://www.mercadolibre.com.mx/bateria-recargable-14500-37v-aa-pilas-paquete-de-5pz/up/MLMU444769361#polycard_client=search-desktop&float_highlight=price_dropped&be_origin=backend&overlay_label=not_apply&search_layout=grid&position=41&type=product&tracking_id=673afcfe-ed87-421f-a0eb-6174e7703da4&wid=MLM1369192975&sid=search) |
 | Jumper wires | Generic | 1 | $4.99 | $4.99 | [Amazon](https://www.amazon.com.mx/Pruebas-Opcionales-Surtido-Multicolo-Macho-Macho/dp/B0F8K2V18S/ref=sr_1_12?__mk_es_MX=ÅMÅŽÕÑ&crid=2FS9WYDOSLELE&dib=eyJ2IjoiMSJ9.crRcIveGq5Dw6rDP8TsgO1dETPBiBBGED-DrAo09-GRAilTQacxppwqxDViYUAY-jR3B_KcH6lcgj1K-tfIU84nO_ciKgtcC6ZQgJShRqth2BKZDS8j-fq_M_uzVEkaHaFCv_eAJsr9aoTBhb2Q0aKqUz7Y5OnCptMHbCzkuZ_h_VzxIN1AAuZdxH5VF6VKSBQSK2pvNOzy734qRTMIaI2mt8i6tOXdPIBouzRZpiuLq350KXtcUkKXS91tydHXCoizO2jGQa5hunUlGqmn3LnBxT9KSzTnNlR9Szy-x-m0.PVsSNEvhWFqVmlIMK_lOHYp4xiS0gu-wmmEk9sWaAvc&dib_tag=se&keywords=cable%2Bdupont&qid=1788641719&sprefix=cables%2Bdupont%2Caps%2C160&sr=8-12&th=1) |
 
 ## Enclosure (not included in the subtotal)
