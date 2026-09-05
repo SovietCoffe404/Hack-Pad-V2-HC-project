@@ -72,7 +72,7 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 |---|---|---|---|---|---|
 | TP4056 protected Li-ion charging module (USB-C) | Generic, with protection | 1 | $1.99 | $1.99 | [Amazon](https://www.amazon.com/TP4056/s?k=TP4056) |
 | 14500 Li-ion rechargeable cell, 3.7V | Generic protected cell | 1 | $6.99 | $6.99 | [Amazon](https://www.amazon.com/14500-battery-3-7v-li-ion-rechargeable/s?k=14500+battery+3.7v+li-ion+rechargeable) |
-| Jumper wires | Generic | 1 | $0.50 | $0.50 | Amazon |
+| Jumper wires | Generic | 1 | $4.99 | $4.99 | [Amazon](https://www.amazon.com.mx/Pruebas-Opcionales-Surtido-Multicolo-Macho-Macho/dp/B0F8K2V18S/ref=sr_1_12?__mk_es_MX=ÅMÅŽÕÑ&crid=2FS9WYDOSLELE&dib=eyJ2IjoiMSJ9.crRcIveGq5Dw6rDP8TsgO1dETPBiBBGED-DrAo09-GRAilTQacxppwqxDViYUAY-jR3B_KcH6lcgj1K-tfIU84nO_ciKgtcC6ZQgJShRqth2BKZDS8j-fq_M_uzVEkaHaFCv_eAJsr9aoTBhb2Q0aKqUz7Y5OnCptMHbCzkuZ_h_VzxIN1AAuZdxH5VF6VKSBQSK2pvNOzy734qRTMIaI2mt8i6tOXdPIBouzRZpiuLq350KXtcUkKXS91tydHXCoizO2jGQa5hunUlGqmn3LnBxT9KSzTnNlR9Szy-x-m0.PVsSNEvhWFqVmlIMK_lOHYp4xiS0gu-wmmEk9sWaAvc&dib_tag=se&keywords=cable%2Bdupont&qid=1788641719&sprefix=cables%2Bdupont%2Caps%2C160&sr=8-12&th=1) |
 
 ## Enclosure (not included in the subtotal)
 
@@ -82,7 +82,7 @@ PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONF
 
 ## Subtotal
 
-**On-board + off-board parts: ≈ $42.55** (excludes shipping, taxes, and the case)
+**On-board + off-board parts: ≈ $47.55** (excludes shipping, taxes, and the case)
 
 ## Screen Shots!
 
