@@ -1,17 +1,17 @@
 # Firmware
 
-## Structure
+## Structure ദ്ദി(ᵔᗜᵔ)
 
 | File | For what? |
 |---|---|
 | `platformio.ini` | Board config (`seeed_xiao_esp32c3`) and libraries |
 | `src/main.cpp` | Starts everything, updates the on-screen indicator |
-| `src/config.h` / `config.cpp` | Saves text, macros, and LED color to NVS `Preferences` |
+| `src/config.h` / `config.cpp` | Saves the text, macros and LED color using NVS Preferences |
 | `src/display.h` / `display.cpp` | Drives our OLED display |
 | `src/leds.h` / `leds.cpp` | Drives the LEDs |
 | `src/keys.h` / `keys.cpp` | Reads the 4 buttons, runs macros over, detects the secret combo of keys ;D |
 | `src/game_snake.h` / `game_snake.cpp` | The secret minigame |
-| `src/serial_protocol.h` / `serial_protocol.cpp` | USB (serial) protocol that talks to `pc_app/` |
+| `src/serial_protocol.h` / `serial_protocol.cpp` | USB (serial) protocol, is used to talk with the pc_app/ |
 
 ## Flashing (PlatformIO + VS Code)
 
@@ -27,7 +27,7 @@
 1. With the firmware running, open the Bluetooth settings on your
    PC/phone and look for a device named **"HACK-PAD"**.
 2. Pair it like any Bluetooth device.
-3. Once paired the top-right corner should be green, if it doesn't try to connect again.
+3. Once paired, the top-right corner should turn green. If it doesn't, try connecting again. (¬_¬")
 4. The 4 keys send their macros over Bluetooth (it still works for reconfiguring from
    `pc_app/`, in parallel).
 
