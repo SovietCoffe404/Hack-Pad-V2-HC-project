@@ -1,12 +1,12 @@
 # App
 
-A Python app I've crated to configure our HACK-PAD over USB cable. ◝(ᵔᗜᵔ)◜
+A Python app I've created to configure our HACK-PAD over USB cable. ◝(ᵔᗜᵔ)◜
 
 ## Structure
 
 | File | For what? |
 |---|---|
-| `hackpad_app.py` | hackpad_app.py — The main app, handles the screen, macros, LEDs and extra games |
+| `hackpad_app.py` | the main app that handles the screen, macros, LEDs and extra games |
 | `serial_link.py` | serial_link.py — Handles the USB connection with the pad |
 | `image_convert.py` | Converts any image to 128x128 RGB565 |
 | `games/snake_game.py` | Extra Snake, played with the PC keyboard |
