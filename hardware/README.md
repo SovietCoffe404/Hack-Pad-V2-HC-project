@@ -1,4 +1,4 @@
-# Hardware
+# Hardware ( ꩜ ᯅ ꩜;)⁭ ⁭
 
 ## `PCB`
 
@@ -16,11 +16,11 @@
 
 | File | What it is |
 |---|---|
-| `CAD/case_models/3D_HACK-PAD_Assembled.step` | 3D model with all components mounted — for visualizing/rendering the full pad |
-| `CAD/case_models/3D_HACK-PAD_Printing.step` | Simplified 3D model (no electronics) — for 3D-printing the case/enclosure |
+| `CAD/case_models/3D_HACK-PAD_Assembled.step` | 3D model with all components mounted — basically the full pad for viewing/rendering |
+| `CAD/case_models/3D_HACK-PAD_Printing.step` | Simplified 3D model without the electronics — this is the one for 3D-printing the case ᵔ ᵕ ᵔ |
 | `CAD/case_models/3D HACK-PAD Top.step` | The top of the case, it keeps everything in place |
 | `CAD/case_models/3D HACK-PAD Body.step` | Our main case, it stores all the electronics |
-| `CAD/case_models/3D HACK-PAD Battery cover.step` | Case for the batteries compartment |
+| `CAD/case_models/3D HACK-PAD Battery cover.step` | Cover for the battery compartment |
 
 ## `CAD/keycap_models`
 
