@@ -1,6 +1,6 @@
 # Production!
 
-Every file ready for manufacturing!
+Every file ready for manufacturing! ( ≧ᗜ≦)
 
 ## Files
 
@@ -34,7 +34,7 @@ Every file ready for manufacturing!
 
 ## Case — STEP files
 
-STEP (AP214), modifiable in every CAD (FreeCAD, Fusion 360, SolidWorks, etc.)
+STEP (AP214), so you can open/edit it in CAD programs like FreeCAD, Fusion 360, SolidWorks, etc. ◝(ᵔᵕᵔ)◜
 
 | Part | File | Notes |
 |---|---|---|
