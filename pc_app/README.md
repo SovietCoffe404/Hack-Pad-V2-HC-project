@@ -1,6 +1,6 @@
 # App
 
-Desktop app in Python to configure the HACK-PAD over USB.
+A Python app I've crated to configure our HACK-PAD over USB cable. ◝(ᵔᗜᵔ)◜
 
 ## Structure
 
