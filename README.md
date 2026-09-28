@@ -8,15 +8,15 @@ Hiii, well this is my second version of the Hack Pad since the other one was kin
 ## What it does
 
 - 🖥️ **Custom screen** — Showing anything u want, text or image. Upload it by the PC app!
-- ⌨️ **4 keys with editable macros** — Customizable key macros (copy, paste, undo, etc.)
+- ⌨️ **4 keys with editable macros** — U can change what every key does, like copy, paste, undo, etc.
 - 🌈 **RGB LEDs with configurable color** — Also custom! choose the color u want in the app.
-- 🎮 **Secret minigame** — Snake hidden inside the pad
+- 🎮 **Secret minigame** — Snake hidden inside the pad itself, with the option to add more games if wanted ;DS 
 
   `Hint`: Press all keys down at the same time
 
 - 🕹️ **Extra minigames on the PC** — U can add more minigames!
 - 🔌 **USB cable** — Only used to configure the pad from the PC app.
-- 🔋 **Battery** (14500 Li-ion + TP4056 charging) you can replace it whenever is needed.
+- 🔋 **Battery** (14500 Li-ion + TP4056 charging) — u can replace it whenever it's needed.
 
 ## Repo structure
 
@@ -44,10 +44,9 @@ Each folder has its own README with the details, such like the PINOUT and clarif
 | D9 (MISO) | OLED CS |
 | D10 (MOSI) | OLED MOSI/DIN |
 
-## Communication protocol (firmware ↔ PC app, over the cable)
+## Communication protocol
 
-Plain text over USB, 115200 baud — full command reference in
-`firmware/README.md`. Summary:
+The PC app talks to the pad using plain text over USB. The full commands are in the firmware's README, but right here's a quick summary:
 
 ```
 PING · SET_TEXT · SET_MACRO · SET_COLOR · SET_BRIGHTNESS · SAVE · GET_CONFIG · IMG_START
