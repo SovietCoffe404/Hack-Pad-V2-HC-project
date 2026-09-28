@@ -10,7 +10,7 @@ Hiii, well this is my second version of the Hack Pad since the other one was kin
 - 🖥️ **Custom screen** — Showing anything u want, text or image. Upload it by the PC app!
 - ⌨️ **4 keys with editable macros** — U can change what every key does, like copy, paste, undo, etc.
 - 🌈 **RGB LEDs with configurable color** — Also custom! choose the color u want in the app.
-- 🎮 **Secret minigame** — Snake hidden inside the pad itself, with the option to add more games if wanted ;DS 
+- 🎮 **Secret minigame** — Snake hidden inside the pad itself, with the option to add more games if wanted ˙𐃷˙ 
 
   `Hint`: Press all keys down at the same time
 
