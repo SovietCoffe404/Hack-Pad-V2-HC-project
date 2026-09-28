@@ -1,8 +1,7 @@
-```csv
 RefDes,Description,Manufacturer / Part,Qty,Unit Price (USD),Line Total (USD),Supplier,Supplier Link,Notes
 U1,"XIAO ESP32-C3 module (RISC-V, WiFi+BLE)",Seeed Studio XIAO ESP32C3,1,4.99,4.99,Seeed Studio,https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html,Main microcontroller; runs firmware
 U2 (SCREEN),1.5in 128x128 RGB OLED display SPI (SSD1351),Waveshare 1.5inch RGB OLED Module,1,20.99,20.99,Waveshare,https://www.waveshare.com/1.5inch-rgb-oled-module.htm,7-pin PH2.0 cable included
-SW1-SW4,"Cherry MX mechanical switch (PCB mount)", "Cherry MX (linear or tactile, buyer's choice)",4,0.35,1.40,MechanicalKeyboards.com,https://mechanicalkeyboards.com/collections/cherry-switches,Any Cherry MX variant fits the footprint
+SW1-SW4,"Cherry MX mechanical switch (PCB mount)","Cherry MX (linear or tactile, buyer's choice)",4,0.35,1.40,MechanicalKeyboards.com,https://mechanicalkeyboards.com/collections/cherry-switches,Any Cherry MX variant fits the footprint
 D1-D6,Addressable RGB LED PLCC4 5x5mm,OPSCO SK6812,6,0.07,0.42,LCSC,https://www.lcsc.com/product-detail/RGB-LEDs-Built-in-IC_OPSCO-Optoelectronics-SK6812_C5378720.html,Unit price drops toward $0.044 at higher volume
 R1,Resistor 330 ohm 1206 SMD,Generic 1206 thick-film resistor,1,0.02,0.02,LCSC,https://www.lcsc.com/,Any 1206 330R part works
 C1,Capacitor 1206 SMD (schematic value: 100nF),Generic 1206 capacitor,1,0.10,0.10,LCSC,https://www.lcsc.com/,
@@ -12,4 +11,3 @@ PCB,Custom 2-layer PCB (fabricated from hardware/*.kicad_pcb),Custom fab,1,5.00,
 BAT1,14500 Li-ion rechargeable cell 3.7V,Generic protected 14500 cell,1,6.99,6.99,Amazon,https://www.amazon.com/14500-battery-3-7v-li-ion-rechargeable/s?k=14500+battery+3.7v+li-ion+rechargeable,Off-board; wired to the TP4056 module
 -,Hookup wire for the battery/VIN connection,Generic 22-24AWG wire,1,0.50,0.50,Generic (Amazon),https://www.amazon.com/,"Short length, a few cm"
 -,3D-printed enclosure (see hardware/3D_HACK-PAD_Printing.step),Printed in-house or via a print service,1,N/A,N/A,Your printer or a service (e.g. JLC3DP/Craftcloud),N/A,Cost depends on filament/service; not included in the subtotal below
-```
